@@ -25,16 +25,21 @@ Select ONE Additional Feature to Add
     body{
 background-image:url("https://66.media.tumblr.com/65cff898fadc321a12d3038fddfc5546/tumblr_o2l7zsaLo91v7k1kfo1_500.gif") ;
 background-size: cover;
+      <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+      width="20" height="200">
 
-    }
+    
+}
 
 
 
   </style>
   
-  <body style"background-image:url(https://66.media.tumblr.com/65cff898fadc321a12d3038fddfc5546/tumblr_o2l7zsaLo91v7k1kfo1_500.gif);">
+  <body>
     
   <style>
+    <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+      width="20" height="20">
 
 
 
@@ -60,12 +65,17 @@ background-size: cover;
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img class="movie-pic"
+       <img class="princess" src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+      width="20" height="20">
+
+
     </div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 Where did i travel during the summer with my choir?
+        ✈ Where did i travel during the summer with my choir?
         <select id="book-answer">
           <option value="book1">California</option>
           <option value="book2">Japan</option>
@@ -73,14 +83,16 @@ background-size: cover;
           <option value="book4">Nowhere</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
     <div id="book-result">
       <p id="book-text"></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      
+      var $pic = $("princessM-pic");
+
+
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -90,10 +102,20 @@ background-size: cover;
 
         if (answer === "movie1") {
           $("#movie-text").text("YESSSS!");
+          
         } 
         else {
           $("#movie-text").text("Try Again!");
         }
+        
+        if (answer === "movie3")  {
+          $("#movie-text").text("UNDERRATED MOVIE i love it so much i can talk about it for 45 minutes but lets move on. You are correct btw")
+          $(".movie-pic").attr("src", "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg")
+          $("#")
+        }
+
+
+
       });
 
       //=======================Book Question jQuery Code
