@@ -28,27 +28,22 @@ background-size: cover;
       <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
       width="20" height="200">
 
-    
-}
+  }
 
-
+  #movi1-pic {
+    border: 2px rgb(156, 50, 255);
+    width: 200px;
+  }
 
   </style>
   
   <body>
     
-  <style>
-    <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
-      width="20" height="20">
+  
 
-
-
-
-  </style>
    
 
-    <img sr="https://66.media.tumblr.com/65cff898fadc321a12d3038fddfc5546/tumblr_o2l7zsaLo91v7k1kfo1_500.gif">
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About [Kai]</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
@@ -65,10 +60,16 @@ background-size: cover;
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
-      <img class="movie-pic"
-       <img class="princess" src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
-      width="20" height="20">
+      <img class="movi1-pic"
+       
+       <img id="movi1-pic" src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
 
+      <img id="movi1-pic"
+        src"https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        width="150"
+        />
+
+          
 
     </div>
     <hr />
@@ -87,11 +88,16 @@ background-size: cover;
     </form>
     <div id="book-result">
       <p id="book-text"></p>
-    </div>
+   
+    
+    
+    
+    
+      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       var $pic = $("princessM-pic");
-
+      $("#movi1-pic").hide();
 
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -99,18 +105,23 @@ background-size: cover;
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
-
+         $("#movi1-pic").hide().fadeIn(2000);
         if (answer === "movie1") {
           $("#movie-text").text("YESSSS!");
-          
+           $("#movi1-pic").show();
+
         } 
         else {
           $("#movie-text").text("Try Again!");
         }
         
         if (answer === "movie3")  {
+          $("#movie-pic").hide();
           $("#movie-text").text("UNDERRATED MOVIE i love it so much i can talk about it for 45 minutes but lets move on. You are correct btw")
-          $(".movie-pic").attr("src", "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg")
+          $("#movie-pic").attr("src", "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg")
+          $("#movie-pic").show();
+
+
           $("#")
         }
 

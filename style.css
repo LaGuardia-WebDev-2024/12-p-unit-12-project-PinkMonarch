@@ -16,6 +16,18 @@
   margin-bottom: 20px;
 }
 
+#flavor-result {
+  background: rgb(178, 46, 255)
+  border: 5px solid rgb(38, 112, 248)
+  
+}
+
+
+
+
+
+
+
 hr {
   height: 5px;
   background-color: rgb(38, 112, 248);
