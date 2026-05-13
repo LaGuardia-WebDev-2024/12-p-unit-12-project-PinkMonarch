@@ -25,15 +25,18 @@ Select ONE Additional Feature to Add
     body{
 background-image:url("https://66.media.tumblr.com/65cff898fadc321a12d3038fddfc5546/tumblr_o2l7zsaLo91v7k1kfo1_500.gif") ;
 background-size: cover;
-      <img src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
-      width="20" height="200">
-
+      
   }
 
   #movi1-pic {
     border: 2px rgb(156, 50, 255);
     width: 200px;
   }
+
+  p {
+    color:rgb(212, 165, 255)
+    }
+
 
   </style>
   
@@ -60,16 +63,22 @@ background-size: cover;
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
-      <img class="movi1-pic"
+      
        
-       <img id="movi1-pic" src="https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+       <img id="movi1-pic" src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/344/2024/06/23065214/kikis-delivery-service.png"
+       width="250"
+       height="250"
+       >
 
-      <img id="movi1-pic"
-        src"https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-        width="150"
-        />
+      <img id="movi2-pic" src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/howlsmovingcastle_1.png"
+      width="250"
+      height="250"
+      >
 
-          
+      <img id="movi3-pic" src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Princess_Mononoke.jpg/revision/latest/scale-to-width/360?cb=20220409212252"
+      width="290"
+      height="290"
+      > 
 
     </div>
     <hr />
@@ -96,36 +105,46 @@ background-size: cover;
       </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      var $pic = $("princessM-pic");
+      
+      $("#movi3-pic").hide();
       $("#movi1-pic").hide();
-
+      $("#movi2-pic").hide();
+      $("movi3-pic").hide();
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
-
+      $("#movi1-pic").hide();
+      $("#movi2-pic").hide();
+      $("#movi3-pic").hide();
         var $answer = $("#movie-answer");
         var answer = $answer.val();
-         $("#movi1-pic").hide().fadeIn(2000);
+        //  $("#movi1-pic").hide().fadeIn(2000);
+
+
         if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
-           $("#movi1-pic").show();
+          $("#movie-text").hide().fadeIn(2000).text("Its cute but not my fav! close!");
+           $("#movi1-pic").fadeIn(2000).show();
+         
 
+            // $("#movi2-pic").hide().fadeIn(2000);
         } 
-        else {
-          $("#movie-text").text("Try Again!");
-        }
+          
+       
         
-        if (answer === "movie3")  {
-          $("#movie-pic").hide();
-          $("#movie-text").text("UNDERRATED MOVIE i love it so much i can talk about it for 45 minutes but lets move on. You are correct btw")
-          $("#movie-pic").attr("src", "https://m.media-amazon.com/images/M/MV5BZTcyN2Y0MDYtMGI1NC00MWQ1LWFhZGMtN2U4NTcxZGYyNjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg")
-          $("#movie-pic").show();
+         else if (answer === "movie3")  {
+          $("#movi3-pic").hide();
+          $("#movie-text").hide().fadeIn(2000).text("UNDERRATED MOVIE i love it so much i can talk about it for 45 minutes but lets move on. You are correct btw")
+          $("#movi3-pic").fadeIn(2000).show();
 
-
-          $("#")
+          // $("#")
         }
 
+         else  {
+          
+          $("#movie-text").hide().fadeIn(2000).text("I really love this movie it was my fav for a while but its not my number one fav anymore :3 try again!");
+          $("#movi2-pic").fadeIn(2000).show();
 
+        }
 
       });
 
