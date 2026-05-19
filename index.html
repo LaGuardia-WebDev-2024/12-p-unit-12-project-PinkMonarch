@@ -80,6 +80,11 @@ background-size: cover;
       height="290"
       > 
 
+      <img id="movi4-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHZe1ihDN31TSFeWiGKVOE8uI5KT6oxt11CbZ41xCfDSd9aGUh8AcDbY8ptGXk3pwJCyE&s=10"
+      width="290"
+      
+      >
+
     </div>
     <hr />
     <!-- Book Question -->
@@ -109,13 +114,16 @@ background-size: cover;
       $("#movi3-pic").hide();
       $("#movi1-pic").hide();
       $("#movi2-pic").hide();
-      $("movi3-pic").hide();
+      $("#movi4-pic").hide();
+      $("#movi4-pic").hide();
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
-      $("#movi1-pic").hide();
+      
+        $("#movi1-pic").hide();
       $("#movi2-pic").hide();
       $("#movi3-pic").hide();
+      $("movi4-pic").hide();
         var $answer = $("#movie-answer");
         var answer = $answer.val();
         //  $("#movi1-pic").hide().fadeIn(2000);
@@ -129,7 +137,12 @@ background-size: cover;
             // $("#movi2-pic").hide().fadeIn(2000);
         } 
           
-       
+          else if (answer=== "movie4") {
+          $("#movi4-pic").hide();
+            $("#movie-text").hide().fadeIn(2000).text("This movie is so creative and adorable but not my fav keep trying!")
+            $("#movi4-pic").fadeIn(2000).show();
+          }
+
         
          else if (answer === "movie3")  {
           $("#movi3-pic").hide();
@@ -139,12 +152,19 @@ background-size: cover;
           // $("#")
         }
 
+
+        
+
+
          else  {
           
           $("#movie-text").hide().fadeIn(2000).text("I really love this movie it was my fav for a while but its not my number one fav anymore :3 try again!");
           $("#movi2-pic").fadeIn(2000).show();
 
         }
+        
+         
+        
 
       });
 
@@ -156,11 +176,19 @@ background-size: cover;
         var answer = $answer.val();
 
         if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+          $("#book-text").text("Nope I WANT TO THO. NEXT VACAY!");
         } 
-        else {
-          $("#book-text").text("Try Again!");
+        else if (answer === "book2") {
+          $("#book-text").text("DING DING DING. I reccomend its such a good vacay place");
         }
+
+         else if (answer === "book3") {
+            $("#book-text").hide().fadeIn(2000).text("Not quite try again")
+          }
+
+
+
+
       });
       
     </script>
